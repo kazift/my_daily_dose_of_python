@@ -1,0 +1,20 @@
+print('Cutu Calculator 1.0\n')
+print('1.Addition\n2.Subtraction\n3.Multiplication\n')
+choice_1 = int(input('Enter Your Choice: '))
+if choice_1 == 1:
+    value_1 = int(input('\nEnter the first number: '))
+    value_2 = int(input('\nEnter the second number:'))
+    print('\nSummation of the number', value_1, 'and', value_2, 'is', value_1 + value_2)
+
+elif choice_1 == 2:
+    value_1 = int(input('\nEnter the first number: '))
+    value_2 = int(input('\nEnter the second number:'))
+    print('\nSubtraction of', value_1, '&', value_2, 'is', value_1 - value_2)
+
+elif choice_1 == 3:
+    value_1 = int(input('\nEnter the first number: '))
+    value_2 = int(input('\nEnter the second number:'))
+    print('\nSubtraction of', value_1, '&', value_2, 'is', value_1 / value_2)
+
+else:
+    print('Invalid Selection\n')
