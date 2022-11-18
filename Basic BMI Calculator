@@ -1,0 +1,8 @@
+def bmi(usr_wt, usr_ht):
+    usr_bmi = float(usr_wt / (usr_ht ** 2))
+    print(f'Your BMI is: {usr_bmi}')
+
+
+users_weight = float(input('Enter Your Weight in Kg\nAns: '))
+users_height = float(input('Enter Your Height in Meters:\nAns: '))
+bmi(users_weight, users_height)
