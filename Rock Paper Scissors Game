@@ -3,7 +3,8 @@ import random  # importing the random module
 
 def rps_game(user_input):   # creating my own function here
     # import random <- tested importing with in function
-    rock = '''              #these are the rock paper scissors ascii art, taken from google sources
+    # these are the rock paper scissors ascii art, taken from Google sources
+    rock = '''              
         _______
     ---'   ____)  
           (_____)  
