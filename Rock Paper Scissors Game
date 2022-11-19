@@ -1,0 +1,74 @@
+import random  # importing the random module
+
+
+def rps_game(user_input):   # creating my own function here
+    # import random <- tested importing with in function
+    rock = '''              #these are the rock paper scissors ascii art, taken from google sources
+        _______
+    ---'   ____)  
+          (_____)  
+          (_____)  
+          (____)
+    ---.__(___)  
+    '''
+
+    paper = '''  
+        _______
+    ---'   ____)____  
+              ______)  
+              _______)  
+             _______)
+    ---.__________)  
+    '''
+
+    scissors = '''  
+        _______
+    ---'   ____)____  
+              ______)  
+           __________)  
+          (____)
+    ---.__(___)  
+    '''
+    images_rps = [rock, paper, scissors]    # I've stored them in images_rps
+    user_input = user_input - 1     # for enriched user experience, and to enable 1, 2, 3 instead of 0, 1, 2: I
+    # user_input = int(input('Ans: ')) - 1
+    if user_input < 0 or user_input > 2:    # as the user can give other inputs, I must let them stay on track innit?
+        print('Invalid Selection')
+    else:
+        print(images_rps[user_input])
+        user_input += 1
+        computer_input = random.randint(0, 2)
+        print(images_rps[computer_input])
+        computer_input += 1
+        if (user_input == 1 and computer_input == 1) or (user_input == 2 and computer_input == 2) or (
+                user_input == 3 and computer_input == 3):
+            print('Game Draw!!')
+        elif user_input == 1 and computer_input == 2:
+            print('Computer Wins')
+        elif user_input == 1 and computer_input == 3:
+            print('You Win!!')
+        elif user_input == 2 and computer_input == 1:
+            print('You Win!!')
+        elif user_input == 2 and computer_input == 3:
+            print('Computer Wins')
+        elif user_input == 3 and computer_input == 1:
+            print('Computer Wins!')
+        elif user_input == 3 and computer_input == 2:
+            print('You Win!!')
+        else:
+            print('Invalid Input :(')
+
+
+game_input = int(input('Welcome to Rock-Paper-Scissors Game!\nEnter 1 for Rock, 2 for Paper, 3 for Scissors\nAns: '))
+rps_game(game_input)
+user_choice = input('Play Again?(y/n): ')
+while user_choice == 'y':
+    random_greetings_text = ["Good to see you again!", "Nice to see you again!!", "Hurray You decided to play again!!"]
+    random_greetings = random.randint(0, 2)
+    print(random_greetings_text[random_greetings])
+# testing if the randint is working properly// print(random_greetings)
+    game_input = int(input('\nEnter 1 for Rock, 2 for Paper, 3 for Scissors\n'))
+    rps_game(game_input)
+    user_choice = input('Play Again?(y/n): ')
+else:
+    print('Thank You for Playing!!')
