@@ -1,0 +1,5 @@
+# band name generator
+users_name = input('Enter Your Name.\nAns: ')
+users_place_of_birth = input('Enter Your Place of Birth.\nAns: ')
+users_pets_name = input('Enter Your Pet\'s name.\nAns: ')
+print(f'Hey {users_name}, Your Band Name is: {users_name}-{users_place_of_birth}-{users_pets_name}')
