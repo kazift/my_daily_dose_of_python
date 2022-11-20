@@ -1,0 +1,7 @@
+# building a bill calculator where the bot will split the bill equally
+food_bill = int(input('Enter The Bill Amount.\nAns: '))
+tips = int(input('Enter The Amount of Tips.\nAns: '))
+total_people_count = int(input('How many people would split the bill?\nAns: '))
+total_bill = (food_bill + tips)
+split_amount = total_bill / total_people_count
+print(f'Total Bill = {total_bill} BDT/- and everyone should pay {split_amount} BDT/-')
