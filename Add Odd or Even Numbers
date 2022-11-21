@@ -1,0 +1,26 @@
+# creating a code to add even numbers
+def even_adder():
+    initial_number = int(input('Enter the first number: '))
+    ending_number = int(input('Enter the ending number: '))
+    sum_of_even = 0
+    for even_number in range(initial_number, ending_number + 1, 1):  # adding ending number + 1, because the range ends one number before
+        if even_number % 2 == 0:
+            sum_of_even = sum_of_even + even_number
+    print(f'Summation of the even numbers from {initial_number} to {ending_number} is: {sum_of_even}')
+
+
+def odd_adder():
+    initial_number = int(input('Enter the first number: '))
+    ending_number = int(input('Enter the ending number: '))
+    sum_of_odd = 0
+    for odd_number in range(initial_number, ending_number + 1, 1):  # adding ending number + 1, because the range ends one number before
+        if odd_number % 2 != 0:
+            sum_of_odd = sum_of_odd + odd_number
+    print(f'Summation of the odd numbers from {initial_number} to {ending_number} is {sum_of_odd}')
+
+
+user_choice_1 = int(input('Welcome to Odd or Even Adder\n1) Add Even Numbers.\n2) Add Odd Numbers.\nAns: '))
+if user_choice_1 == 1:
+    even_adder()
+elif user_choice_1 == 2:
+    odd_adder()
