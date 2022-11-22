@@ -1,0 +1,26 @@
+import random
+
+words_list = ['Hello', 'Done', 'Tired', 'Today', 'Sad', 'Hacker', 'Busy', 'Day', 'Banana']
+selected_word = random.choice(words_list).lower()
+print(f'The word is: {selected_word}')
+length_of_selected_word = len(selected_word)
+print(f'Length of the word is: {length_of_selected_word}')
+dashes_printer = ""
+for i in range(0, length_of_selected_word, 1):
+    dashes_printer += ' _ '
+print(dashes_printer)
+word_n_dash_printer = ""
+guess_the_letter = input('Enter the letter you guessed: ').lower()
+life = 3
+counter = 0
+for j in selected_word:
+    if j == guess_the_letter:
+        word_n_dash_printer += j
+        counter += 1
+        continue
+    word_n_dash_printer += ' _ '
+if counter > 0:
+    print(word_n_dash_printer)
+else:
+    life -= 1
+    print(f'Wrong Guess, life remaining: {life}')
